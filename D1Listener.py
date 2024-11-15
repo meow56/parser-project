@@ -89,5 +89,41 @@ class D1Listener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by D1Parser#conditional.
+    def enterConditional(self, ctx:D1Parser.ConditionalContext):
+        pass
+
+    # Exit a parse tree produced by D1Parser#conditional.
+    def exitConditional(self, ctx:D1Parser.ConditionalContext):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#block.
+    def enterBlock(self, ctx:D1Parser.BlockContext):
+        pass
+
+    # Exit a parse tree produced by D1Parser#block.
+    def exitBlock(self, ctx:D1Parser.BlockContext):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#boolExpr.
+    def enterBoolExpr(self, ctx:D1Parser.BoolExprContext):
+        pass
+
+    # Exit a parse tree produced by D1Parser#boolExpr.
+    def exitBoolExpr(self, ctx:D1Parser.BoolExprContext):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#comparisons.
+    def enterComparisons(self, ctx:D1Parser.ComparisonsContext):
+        pass
+
+    # Exit a parse tree produced by D1Parser#comparisons.
+    def exitComparisons(self, ctx:D1Parser.ComparisonsContext):
+        pass
+
+
 
 del D1Parser

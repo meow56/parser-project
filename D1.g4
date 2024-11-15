@@ -1,9 +1,10 @@
 grammar D1;
 
-start: statement? NEWLINES
-	| statement? EOF;
+start: (statement? NEWLINES)+
+	| statement? EOF
+	| conditional;
 
-NEWLINES: [\n]+;
+NEWLINES: [\r\n]+;
 
 statement: assignment
 	| value;
@@ -27,8 +28,8 @@ value: NUMBER
 	| '(' value ')';
 
 NUMBER: '-'?[0-9]+(.[0-9]+)?;
-STRING: '"' .+? '"'
-	| '\'' .+? '\'';
+STRING: '"' .*? '"'
+	| '\'' .*? '\'';
 array: '[' (value ',')* (value) ']'
 	| '[]';
 boolean: 'True'
@@ -41,5 +42,25 @@ arithSymbol: '+'
 	| '*'
 	| '/'
 	| '%';
+
+conditional: 'if' boolExpr ':' NEWLINES block ('elif' boolExpr ':' NEWLINES block)? ('else:' NEWLINES block)?;
+
+block: ('\t' statement NEWLINES)+
+	| ('\t' statement EOF);
+
+boolExpr: boolean
+	| boolExpr 'and' boolExpr
+	| boolExpr 'or' boolExpr
+	| 'not' boolExpr
+	| '(' boolExpr ')'
+	| value comparisons value
+	| VARNAME;
+
+comparisons: '=='
+	| '!='
+	| '>='
+	| '<='
+	| '>'
+	| '<';
 
 WS:	[ \t\r]+ -> skip;

@@ -12,7 +12,7 @@ def main(argv):
     counter = 0
     lexer = D1Lexer(inp)
     tokens = CommonTokenStream(lexer)
-    while counter < 30:
+    while counter < 10:
         parser = D1Parser(tokens)
         counter += 1
         tree = parser.start()
