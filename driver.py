@@ -16,7 +16,8 @@ def main(argv):
     tree = parser.start()
     if parser.getNumberOfSyntaxErrors() > 0:
         print(f"Parse error on line {counter}")
-        print(tree.toStringTree(recog=parser))
+    print(tree.toStringTree(recog=parser))
+
 
 
 if __name__ == '__main__':
