@@ -12,13 +12,11 @@ def main(argv):
     counter = 0
     lexer = D1Lexer(inp)
     tokens = CommonTokenStream(lexer)
-    while counter < 10:
-        parser = D1Parser(tokens)
-        counter += 1
-        tree = parser.start()
-        if parser.getNumberOfSyntaxErrors() > 0:
-            print(f"Parse error on line {counter}")
-            print(tree.toStringTree(recog=parser))
+    parser = D1Parser(tokens)
+    tree = parser.start()
+    if parser.getNumberOfSyntaxErrors() > 0:
+        print(f"Parse error on line {counter}")
+        print(tree.toStringTree(recog=parser))
 
 
 if __name__ == '__main__':

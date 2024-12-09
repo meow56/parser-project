@@ -17,6 +17,15 @@ class D1Listener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by D1Parser#lines.
+    def enterLines(self, ctx:D1Parser.LinesContext):
+        pass
+
+    # Exit a parse tree produced by D1Parser#lines.
+    def exitLines(self, ctx:D1Parser.LinesContext):
+        pass
+
+
     # Enter a parse tree produced by D1Parser#statement.
     def enterStatement(self, ctx:D1Parser.StatementContext):
         pass
@@ -107,6 +116,42 @@ class D1Listener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by D1Parser#conditional2.
+    def enterConditional2(self, ctx:D1Parser.Conditional2Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#conditional2.
+    def exitConditional2(self, ctx:D1Parser.Conditional2Context):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#block2.
+    def enterBlock2(self, ctx:D1Parser.Block2Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#block2.
+    def exitBlock2(self, ctx:D1Parser.Block2Context):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#conditional3.
+    def enterConditional3(self, ctx:D1Parser.Conditional3Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#conditional3.
+    def exitConditional3(self, ctx:D1Parser.Conditional3Context):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#block3.
+    def enterBlock3(self, ctx:D1Parser.Block3Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#block3.
+    def exitBlock3(self, ctx:D1Parser.Block3Context):
+        pass
+
+
     # Enter a parse tree produced by D1Parser#boolExpr.
     def enterBoolExpr(self, ctx:D1Parser.BoolExprContext):
         pass
@@ -122,6 +167,60 @@ class D1Listener(ParseTreeListener):
 
     # Exit a parse tree produced by D1Parser#comparisons.
     def exitComparisons(self, ctx:D1Parser.ComparisonsContext):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#while.
+    def enterWhile(self, ctx:D1Parser.WhileContext):
+        pass
+
+    # Exit a parse tree produced by D1Parser#while.
+    def exitWhile(self, ctx:D1Parser.WhileContext):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#while2.
+    def enterWhile2(self, ctx:D1Parser.While2Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#while2.
+    def exitWhile2(self, ctx:D1Parser.While2Context):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#while3.
+    def enterWhile3(self, ctx:D1Parser.While3Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#while3.
+    def exitWhile3(self, ctx:D1Parser.While3Context):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#for.
+    def enterFor(self, ctx:D1Parser.ForContext):
+        pass
+
+    # Exit a parse tree produced by D1Parser#for.
+    def exitFor(self, ctx:D1Parser.ForContext):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#for2.
+    def enterFor2(self, ctx:D1Parser.For2Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#for2.
+    def exitFor2(self, ctx:D1Parser.For2Context):
+        pass
+
+
+    # Enter a parse tree produced by D1Parser#for3.
+    def enterFor3(self, ctx:D1Parser.For3Context):
+        pass
+
+    # Exit a parse tree produced by D1Parser#for3.
+    def exitFor3(self, ctx:D1Parser.For3Context):
         pass
 
 
